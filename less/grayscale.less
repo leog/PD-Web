@@ -40,7 +40,6 @@ p {
 
 a {
     color: #f37021;
-    .transition(all .2s ease-in-out);
     &:hover,
     &:focus {
         text-decoration: none;
@@ -54,13 +53,14 @@ a {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid fade(white, 30%);
     text-transform: uppercase;
-    background-color: black;
+    background-color: transparent;
     .navbar-toggle {
         color: white;
-        background-color: fade(white, 20%);
-        font-size: 12px;
+        font-size: 18px;
+        margin: 0;
+        padding: 15px;
+        float: left;
         &:focus,
         &:active {
             outline: none;
@@ -70,12 +70,15 @@ a {
         img {
 			width: 201px;
             height: 20px;
+            display: inline-block;
+            filter: drop-shadow(2px 2px 2px #202c46);
 		}
         &:focus {
             outline: none;
         }
     }
     a {
+        line-height: 25px;
         color: white;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
@@ -267,7 +270,7 @@ a {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 190px;
+        padding-top: 140px;
     }
 
     .download-section {
@@ -281,24 +284,12 @@ a {
 }
 
 .btn {
-    text-transform: uppercase;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    border-radius: 0;
-}
-
-.btn-default {
-    border: 1px solid @primary;
-    color: @primary;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-        border: 1px solid @primary;
-        outline: none;
-        color: black;
-        background-color: @primary;
+    border: 2px solid #ffffff;
+    font-weight: 600;
+    color: #ffffff;
+    &:hover {
+        color: #f37021;
+        border-color: #f37021;
     }
 }
 
